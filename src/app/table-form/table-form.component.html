@@ -1,0 +1,35 @@
+<form (ngSubmit)="onFormSubmit()" [formGroup]="contactForm" style="margin-top: -1%">
+    <h3 id="logo">Senior Citizen</h3>
+    <label for="eventName">Event Name</label>
+    <input type="text" id="eventName" name="eventName" placeholder="Type in your Event Name.." formControlName="EventName"
+      autocomplete="off" required />
+  
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" placeholder="Type in your Title.." formControlName="Title"
+      autocomplete="off" required />
+  
+    <label for="fileName">File Name</label>
+    <input type="text" id="fileName" name="fileName" placeholder="Type in your File Name.." formControlName="FileName"
+      autocomplete="off" required />
+  
+    <label for="type">Type</label>
+    <select id="type" name="type" formControlName="Type"
+      style="margin:15px 0; padding:15px 10px; width:100%; outline:none; border:1px solid #bbb; border-radius:20px; display:inline-block; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-transition:0.2s ease all; -moz-transition:0.2s ease all; -ms-transition:0.2s ease all; -o-transition:0.2s ease all; transition:0.2s ease all;">
+      <option value="Holiday Snap">Holiday Snap</option>
+      <option value="Weekend Meetup">Weekend Meetup</option>
+      <option value="Ocuasian Picture">Ocuasian Picture</option>
+    </select>
+  
+    <label for="description">Description</label>&nbsp;&nbsp;
+    <textarea id="description" name="description" formControlName="Description"
+      style="margin:15px 0; padding:15px 10px; width:100%; outline:none; border:1px solid #bbb; border-radius:20px; display:inline-block; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-transition:0.2s ease all; -moz-transition:0.2s ease all; -ms-transition:0.2s ease all; -o-transition:0.2s ease all; transition:0.2s ease all;">Description</textarea>
+  
+    <label for="attachedFile">Attach File</label>
+    <input type="file" id="attachedFile" name="attachedFile" (change)="onFileSelected($event)" placeholder="Attach File.."
+      autocomplete="off" required />
+  
+    <input type="submit" (click)="onFormSubmit()" name="Submit" value="Submit"
+      style="width:40%; outline:none; border:1px solid #bbb; border-radius:20px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-transition:0.2s ease all; -moz-transition:0.2s ease all; -ms-transition:0.2s ease all; -o-transition:0.2s ease all; transition:0.2s ease all;" />
+    <input type="submit" name="cancel" value="cancel" style="width:40%; outline:none; border:1px solid #bbb; border-radius:20px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-transition:0.2s ease all; -moz-transition:0.2s ease all; -ms-transition:0.2s ease all; -o-transition:0.2s ease all; transition:0.2s ease all; margin-top: -62px;
+      margin-left: 225px;" />
+  </form>

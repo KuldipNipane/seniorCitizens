@@ -1,0 +1,68 @@
+<button routerLink="/tableForm" routerLinkActive="router-link-active"  routerLinkActive="router-link-active" >Add Item</button>
+<table class="styled-table">
+  <thead>
+    <tr>
+      <!-- <th>ID</th>
+      <th>School Camp Content</th>
+      <th>Full Name</th>
+      <th>Created Date</th>
+      <th>Role ID</th>
+      <th>Email</th>
+      <th>Email Verified</th>
+      <th>Login Type</th>
+      <th>Social Unique ID</th>
+      <th>User Amount</th>
+      <th>Product ID</th>
+      <th>Plan ID</th>
+      <th>New Messages</th>
+      <th>Role Name</th>
+      <th>Default Number</th>
+      <th>SAS Token</th> -->
+      <th>Event Name</th>
+      <th>User ID</th>
+      <th>User Name</th>
+      <th>Title</th>
+      <th>File Name</th>
+      <!-- <th>Password</th>
+      <th>Type</th> -->
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <!-- <td>{{ item.id }}</td>
+      <td>{{ item.schoolCampContent }}</td>
+      <td>{{ item.FullName }}</td>
+      <td>{{ item.CreatedDate }}</td>
+      <td>{{ item.RoleId }}</td>
+      <td>{{ item.Email }}</td>
+      <td>{{ item.EmailVerfied }}</td>
+      <td>{{ item.LoginType }}</td>
+      <td>{{ item.SocialUniqueId }}</td>
+      <td>{{ item.UserAmount }}</td>
+      <td>{{ item.ProductId }}</td>
+      <td>{{ item.PlanId }}</td>
+      <td>{{ item.NewMessages }}</td>
+      <td>{{ item.role_name }}</td>
+      <td>{{ item.default_number }}</td>
+      <td>{{ item.sasToken }}</td> -->
+      <td>{{ item.EventName }}</td>
+      <td>{{ item.UserName }}</td>
+      <td>{{ item.Title }}</td>
+      <td>{{ item.FileName }}</td>
+      <!-- <td>{{ item.Type }}</td> -->
+      <td>{{ item.description }}</td>
+      <td>{{ item.attachedFile }}</td>
+      <td>{{ item.attachment_url }}</td>
+      <td>
+        <button (click)="updateData(item.id)">Update</button>
+        <button (click)="onDelete(item.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <pre>
+  {{data|json}}
+</pre> -->
